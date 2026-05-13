@@ -1,0 +1,32 @@
+/* Bài 2.4: Tùy biến Theme Bootstrap bằng CSS Custom Properties */
+
+:root {
+    /* Override màu primary mặc định của Bootstrap sang màu Teal/Green */
+    --bs-primary: #20c997;
+    --bs-primary-rgb: 32, 201, 151;
+    
+    /* Custom primary variations */
+    --primary-dark: #1aa179;
+    --primary-light: #e0f8f1;
+}
+
+/* Ghi đè các class Bootstrap mặc định để nhận màu mới */
+.text-primary { 
+    color: var(--bs-primary) !important; 
+}
+
+.bg-primary { 
+    background-color: var(--bs-primary) !important; 
+}
+
+.btn-primary { 
+    background-color: var(--bs-primary); 
+    border-color: var(--bs-primary); 
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: white;
+}
