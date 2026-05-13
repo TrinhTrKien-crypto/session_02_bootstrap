@@ -7,43 +7,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">DevPortfolio</a>
         </div>
     </nav>
 
-    <!-- Blog Content -->
     <div class="container py-5">
         <h1 class="mb-5 fw-bold">Latest Articles</h1>
         <div class="row">
-            <!-- Cột nội dung chính (8 phần) -->
             <div class="col-lg-8">
-                <!-- Blog Card 1 -->
                 <div class="card border-0 shadow-sm mb-4">
                     <div class="card-body p-4">
                         <span class="badge bg-primary mb-2">JavaScript</span>
                         <h3 class="card-title fw-bold">The Future of JavaScript</h3>
                         <p class="card-text text-muted">Explore the latest features and improvements coming to JavaScript in the upcoming specification...</p>
-                        <a href="#" class="btn btn-outline-primary mt-2">Read More</a>
                     </div>
                 </div>
-
-                <!-- Blog Card 2 -->
                 <div class="card border-0 shadow-sm mb-4">
                     <div class="card-body p-4">
                         <span class="badge bg-info mb-2">React</span>
                         <h3 class="card-title fw-bold">Building Scalable React Apps</h3>
                         <p class="card-text text-muted">Learn best practices for structuring large React applications effectively...</p>
-                        <a href="#" class="btn btn-outline-primary mt-2">Read More</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Cột Sidebar (4 phần) - Hiện đang để trống -->
+            <!-- Cột Sidebar đã được thêm tính năng Sticky -->
             <div class="col-lg-4">
-                <!-- Code sidebar sẽ thêm ở commit sau -->
+                <div class="sticky-top" style="top: 20px;">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-3">Search</h5>
+                            <input type="text" class="form-control" placeholder="Search articles...">
+                        </div>
+                    </div>
+                    <!-- Categories và Tags sẽ thêm ở commit tiếp theo -->
+                </div>
             </div>
         </div>
     </div>
