@@ -1,0 +1,35 @@
+/* Custom Styles for Comment Section */
+
+#comments {
+    border-top: 3px solid var(--bs-primary);
+}
+
+.comments-list img.rounded-circle {
+    border: 2px solid #e9ecef;
+    object-fit: cover;
+}
+
+/* Hover effect cho nút Reply */
+.comments-list .btn-outline-secondary {
+    border: none;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.comments-list .btn-outline-secondary:hover {
+    background-color: transparent;
+    color: var(--bs-primary);
+    text-decoration: underline;
+}
+
+/* Responsive cho mobile: thu nhỏ ảnh đại diện và thụt lề */
+@media (max-width: 768px) {
+    .comments-list .ms-5 {
+        margin-left: 2rem !important;
+    }
+    
+    .comments-list img.rounded-circle {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
