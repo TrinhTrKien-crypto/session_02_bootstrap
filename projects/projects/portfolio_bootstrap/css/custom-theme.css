@@ -1,32 +1,42 @@
-/* Bài 2.4: Tùy biến Theme Bootstrap bằng CSS Custom Properties */
-
 :root {
-    /* Override màu primary mặc định của Bootstrap sang màu Teal/Green */
+    /* Override Primary Color */
     --bs-primary: #20c997;
     --bs-primary-rgb: 32, 201, 151;
-    
-    /* Custom primary variations */
     --primary-dark: #1aa179;
-    --primary-light: #e0f8f1;
+    
+    /* NEW: Custom Spacing Scale */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 5rem;
+
+    /* NEW: Custom Border Radius */
+    --border-radius-sm: 0.5rem;
+    --border-radius: 0.75rem;
+    --border-radius-lg: 1rem;
+    --border-radius-xl: 1.5rem;
 }
 
-/* Ghi đè các class Bootstrap mặc định để nhận màu mới */
-.text-primary { 
-    color: var(--bs-primary) !important; 
-}
-
-.bg-primary { 
-    background-color: var(--bs-primary) !important; 
-}
-
+/* Colors */
+.text-primary { color: var(--bs-primary) !important; }
+.bg-primary { background-color: var(--bs-primary) !important; }
 .btn-primary { 
     background-color: var(--bs-primary); 
     border-color: var(--bs-primary); 
-    color: white;
+    border-radius: var(--border-radius); /* Áp dụng border-radius mới */
+    padding: var(--spacing-sm) var(--spacing-lg); /* Áp dụng padding mới */
 }
-
 .btn-primary:hover {
     background-color: var(--primary-dark);
     border-color: var(--primary-dark);
-    color: white;
 }
+
+/* Custom Spacing & Border Utilities */
+.py-6 { 
+    padding-top: var(--spacing-xxl) !important; 
+    padding-bottom: var(--spacing-xxl) !important; 
+}
+.rounded-3 { border-radius: var(--border-radius-lg) !important; }
+.rounded-4 { border-radius: var(--border-radius-xl) !important; }
