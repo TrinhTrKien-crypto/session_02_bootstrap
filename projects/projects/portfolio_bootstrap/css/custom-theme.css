@@ -1,42 +1,66 @@
 :root {
-    /* Override Primary Color */
+    /* Primary Colors */
     --bs-primary: #20c997;
-    --bs-primary-rgb: 32, 201, 151;
     --primary-dark: #1aa179;
     
-    /* NEW: Custom Spacing Scale */
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 3rem;
+    /* NEW: Complete New Color Palette */
+    --bs-secondary: #64748b;
+    --bs-success: #22c55e;
+    --bs-info: #06b6d4;
+    --bs-warning: #f59e0b;
+    --bs-danger: #ef4444;
+    --bs-dark: #0f172a;
+    
+    /* Background & Surface Colors */
+    --bg-body: #f8fafc;
+    --bg-surface: #ffffff;
+    
+    /* Spacing & Borders */
     --spacing-xxl: 5rem;
-
-    /* NEW: Custom Border Radius */
-    --border-radius-sm: 0.5rem;
     --border-radius: 0.75rem;
     --border-radius-lg: 1rem;
-    --border-radius-xl: 1.5rem;
+    
+    /* Shadows */
+    --shadow-custom: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
-/* Colors */
-.text-primary { color: var(--bs-primary) !important; }
-.bg-primary { background-color: var(--bs-primary) !important; }
+/* Base Theme Applied */
+body {
+    background-color: var(--bg-body);
+    color: var(--bs-dark);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Card Customization */
+.card {
+    background-color: var(--bg-surface);
+    border: none !important;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-custom);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Customization */
 .btn-primary { 
     background-color: var(--bs-primary); 
-    border-color: var(--bs-primary); 
-    border-radius: var(--border-radius); /* Áp dụng border-radius mới */
-    padding: var(--spacing-sm) var(--spacing-lg); /* Áp dụng padding mới */
+    border-color: var(--bs-primary);
+    border-radius: var(--border-radius); 
+    font-weight: 600;
 }
+
 .btn-primary:hover {
     background-color: var(--primary-dark);
     border-color: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
-/* Custom Spacing & Border Utilities */
+/* Custom Spacing */
 .py-6 { 
     padding-top: var(--spacing-xxl) !important; 
     padding-bottom: var(--spacing-xxl) !important; 
 }
-.rounded-3 { border-radius: var(--border-radius-lg) !important; }
-.rounded-4 { border-radius: var(--border-radius-xl) !important; }
